@@ -1,0 +1,323 @@
+/*!====================================== General Style ================================================= */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url(../images/Riley\ Blake\ Designs\ Confetti\ Cotton\ Solid\ in\ Boy\ Blue.jpeg) no-repeat fixed center/cover;
+    overflow: hidden;
+    padding-top: 15px;
+}
+/*!====================================== Cloud Style ================================================= */
+.cloud-container {
+    position: absolute;
+    width: 100%;
+    z-index: -2;
+}
+.cloud {
+    position: relative;
+    left: -100%;
+    top: 65px;
+    width: 310px;
+    height: 70px;
+    background-color: white;
+    border-radius: 70px;
+    animation: cloud-animation 20s linear 4s infinite;
+}
+.cloud::before {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: white;
+    top: -46px;
+    left: 50px;
+    box-shadow: 90px 0 0 25px white;
+}
+@keyframes cloud-animation {
+    0% {left: -50%;}
+    25% {left: 0%; }
+    100% {left: 100%;}
+}
+.cloud2 {
+    top: 20px;
+    animation-delay: 10s;
+    transform: scale(0.5);
+}
+.cloud3 {
+    top: -100px;
+    animation-delay: 15s;
+    transform: scale(0.7);
+}
+.cloud4 {
+    top: -110px;
+    animation-delay: 20s;
+    transform: scale(0.6);
+}
+/*!================================= Face & Gifts Style ===================================================== */ 
+.sense-container {
+    width: 90%;
+    margin: auto;
+}
+.clear-section {
+    clear: both;
+}
+.Gifts {
+    margin-top: 98px;
+    float: right;
+}
+.faces {
+    float: left;
+}
+/*!=============================================== Face Style ===================================================== */ 
+.face{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: #ffa722;
+    margin-bottom: 90px;
+    position: relative;
+    left: 10%;
+    animation: emoji_animation 4.5s forwards;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.eyes{
+    position: relative;
+}
+.eye1,.eye2{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #d49639;
+    display: inline-block;
+    position: relative;
+    top: 15px;
+    left: 9px;
+}
+.eye1::after,.eye2::after{
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    right: 0;
+    top: 30%;
+    animation: eye-animation 1s ease-out 4.8s forwards;
+}
+.mouse{
+    width: 40px;
+    height: 15px;
+    background-color: brown;
+    border-radius: 0;
+    border-bottom-right-radius: 75px;
+    border-bottom-left-radius: 75px;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: mouse-animation 1s ease-out 5s forwards;
+}
+.face:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+@keyframes mouse-animation {
+    100% {
+        height: 8px;
+        bottom: 13px;
+        border-top-right-radius: 70px;
+        border-top-left-radius: 70px;
+    }
+}
+@keyframes eye-animation {
+    0% {right: 0;}
+    25%{top: 50%;}
+    50%{top: 40%;}
+    100% {
+        top: 30%;
+        right: 45%;
+    }
+}
+@keyframes emoji_animation {
+    0% {transform: rotate(0deg);}
+    100% {
+        transform: rotate(360deg);
+        left: 85vw;
+    }
+}
+.face2 {
+    animation-delay: 9s;
+}
+.face3 {
+    animation-delay: 18s;
+}
+.face4 {
+    animation-delay: 27s;
+    margin-bottom: 0;
+}
+.face2 .eye1::after,.face2 .eye2::after {
+    animation-delay: 13.5s;
+}
+.face2 .mouse {
+    animation-delay: 14s;
+}
+.face3 .eye1::after,.face3 .eye2::after {
+    animation-delay: 22.5s;
+}
+.face3 .mouse {
+    animation-delay: 23s;
+}
+.face4 .eye1::after,.face4 .eye2::after {
+    animation-delay: 31.5s;
+}
+.face4 .mouse {
+    animation-delay: 32s;
+}
+/*!========================================== Gifts Style ==========================================  */
+.gift-body {
+    width:80px;
+    height: 33px;
+    background-color: #b22222;
+    position: relative;
+    margin-bottom: 120px;
+    right: 10%;
+    animation:gift-animation 4.5s 4.5s forwards ease-in-out;
+    transition: transform 0.3s, background-color 0.3s;
+}
+.gift-body::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 100%;
+    left: 32px;
+    background-color: #ffd700;
+}
+.gift-body::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    box-shadow: 0 10px 0.2px 0px rgba(0, 0, 0, 0.1) inset;
+    transition: 0.5s;
+}
+.top-of-present{
+    position: absolute;
+    width: 90px;
+    height: 20px;
+    top: -18px;
+    left: -6px; 
+    background-color: #eac69e;
+    transition: transform 1s;
+}
+.top-of-present::before{
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 30px;
+    background-color: #ffd700;
+    left: 38px;
+}
+.top-of-present::after{
+    position: absolute;
+    content: '';
+    border-width: 8px 10px 8px 10px; 
+    border-style: solid;
+    border-color: transparent #ffd700 #ffd700 #ffd700;
+    top: -16px;
+    left: 36px;
+}
+.gift-body:hover .top-of-present{
+    transform:matrix(0.78,-0.45,0.45,0.78,-80,15);
+}
+.gift-body:hover::after {
+    box-shadow: 0 0px 0px 0px black;
+}
+.content{
+    width: 150px;
+    position: relative;
+}
+.content p {
+    width: 100px;
+    text-align: center;
+    position: absolute;
+    font: 25px/27px system-ui;
+    text-shadow: 1px 1px 2px  rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    z-index: -1;
+}
+.gift-body:hover .content p{
+    opacity: 0;
+    left: -15px;
+    top: 0;
+    animation: content-animation 2s  ease-in-out  both;
+}
+@keyframes content-animation {
+    0%,20% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        top: -65px;
+    }
+}
+@keyframes gift-animation {
+    100% {right: 85vw;}
+}
+.gift2 {
+    animation-delay: 13.5s;
+}
+.gift3 {
+    animation-delay: 22.5s;
+}
+.gift4 {
+    animation-delay: 31.5s;
+    margin-bottom: 0;
+}
+/*!========================================Garden Style ======================================================== */
+.garden-container {
+    width: 100%;
+    margin: 77px 0 0;
+    padding-left: 97px;
+    height: 65px;
+    background-color: #1b9d1b;
+}
+.tree {
+    position: relative;
+    width: 25px;
+    height: 80px;
+    top: -21px;
+    background-color: #620303;
+    float: left;
+    margin-right: 118px;
+}
+.tree::after {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: green;
+    top: -20px;
+    left: -25px;
+    box-shadow: 21px -17px 0 1px green, 40px -2px 0 1px green;
+    animation: sway 4s ease-in-out infinite;
+}
+.tree::before {
+    z-index: 1;
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ac0505;
+    border-radius: 50%;
+    top: -10px;
+    left: -15px;
+    box-shadow: 25px -16px 0 0 #ac0505, 46px 2px 0 0 #ac0505;
+}
+@keyframes sway {
+    0%,100% {transform: rotate(0deg);}
+    50% { transform: rotate(5deg);}
+}
