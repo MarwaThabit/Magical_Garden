@@ -17,13 +17,13 @@ body {
 }
 .cloud {
     position: relative;
-    left: -100%;
+    left: -30%;
     top: 65px;
     width: 310px;
     height: 70px;
     background-color: white;
     border-radius: 70px;
-    animation: cloud-animation 20s linear 4s infinite;
+    animation: cloud-animation 15s linear 2s infinite;
 }
 .cloud::before {
     content: "";
@@ -37,23 +37,22 @@ body {
     box-shadow: 90px 0 0 25px white;
 }
 @keyframes cloud-animation {
-    0% {left: -50%;}
-    25% {left: 0%; }
+    0% {left: -20%; }
     100% {left: 100%;}
 }
 .cloud2 {
     top: 20px;
-    animation-delay: 10s;
+    animation-delay: 5.5s;
     transform: scale(0.5);
 }
 .cloud3 {
     top: -100px;
-    animation-delay: 15s;
+    animation-delay: 9s;
     transform: scale(0.7);
 }
 .cloud4 {
     top: -110px;
-    animation-delay: 20s;
+    animation-delay: 13s;
     transform: scale(0.6);
 }
 /*!================================= Face & Gifts Style ===================================================== */ 
@@ -255,7 +254,7 @@ body {
     animation: content-animation 2s  ease-in-out  both;
 }
 @keyframes content-animation {
-    0%,20% {
+    0%,40% {
         opacity: 0;
     }
     100%{
